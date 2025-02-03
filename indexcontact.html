@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+ 
+    <header>
+    <div class="logo">
+        <img src="images/Icone_quatrePattes.png" alt="Logo de Quatre Pattes">
+        <div>Quatre Pattes</div>
+    </div>
+    
+    <!-- Bouton Burger -->
+    <div class="menu-burger">
+        <div class="barre"></div>
+        <div class="barre"></div>
+        <div class="barre"></div>
+    </div>
+
+    <nav class="burger-navigation">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="indexcontact.html">Contact</a></li>
+            <li class="don-btn"><img src="images/Icone2.png"> Faire un don</li>
+            
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <h1>Contactez-nous</h1>
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom">
+            <div id="erreur-nom" class="message-erreur"></div>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <div id="erreur-email" class="message-erreur"></div>
+            
+            <label for="sujet">Sujet</label>
+            <select id="sujet" name="sujet">
+                <option value="dons">Question sur les dons</option>
+                <option value="dons">Partenariat</option>
+                
+            </select>
+            <div id="erreur-sujet" class="message-erreur"></div>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+            <div id="erreur-message" class="message-erreur"></div>
+            
+            <button type="submit"><img src="images/Icone7.png" width="20" height="20" style="margin-right: 5px;">Envoyer</button>
+
+            
+        </form>
+    </main>
+
+
+    <footer class="section-pied-de-page">
+        <div class="contenu-pied-de-page">
+            <div class="bloc-pied-de-page">
+                <h3>Quatre Pattes</h3>
+                <p>Ensemble, protégeons les animaux et donnons-leur une vie meilleure.</p>
+            </div>
+            <div class="bloc-pied-de-page">
+                <h3>Contact</h3>
+                <p><img src="images/Icone6.png" style="margin-right: 7px;">contact@quatrepattes.org</p>
+    
+            </div>
+            <div class="bloc-pied-de-page">
+                <h3>Suivez-nous</h3>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

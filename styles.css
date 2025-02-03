@@ -1,0 +1,845 @@
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+
+    text-align: center;
+    padding: 10px;
+}
+
+h2 {
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #184b31;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav {
+    display: flex;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+nav ul li {
+    margin-right: 20px;
+    
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.nav-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   
+}
+
+
+
+.nav-mobile ul li {
+    padding: 10px 20px;
+   
+}
+
+.nav-mobile ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    
+}
+
+
+.don-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    padding: 10px 20px; 
+    border: 2px solid rgb(199, 16, 16);
+    border-radius: 5px;
+    background: rgb(199, 16, 16);
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.nav-mobile.active {
+    display: block;
+}
+
+.nav-mobile-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.fermer-menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    display: none;
+}
+
+.fermer-menu:hover {
+    color: #ff6961; 
+}
+
+/* Page contact formulaire */
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea, form button {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #173918;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form button:hover {
+    background-color: #345436;
+}
+
+
+main {
+    margin: 0 0 20px ;
+}
+
+/* Grande photo et texte */
+
+.Grande-photo {
+    position: relative;
+    text-align: center;
+}
+
+.Grande-photo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.Grande-photo img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.superposition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+}
+
+.superposition h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.superposition p {
+    font-size: 18px;
+}
+
+/* Faites un don */
+
+.donation {
+
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.donation h2 {
+    margin-bottom: 20px;
+}
+
+.conteneur-don {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.option-don {
+    border: 2px solid #ddd;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.option-don.actif {
+    border-color: green;
+    background: #e6ffe6;
+    box-shadow: 4px 6px 15px rgba(0, 128, 0, 0.2);
+}
+
+.frequence-don {
+    margin-bottom: 20px;
+}
+
+.bouton-freq-don {
+    border: none;
+    background: #ddd;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.bouton-freq-don:hover {
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.bouton-freq-don.actif {
+    background: green;
+    color: white;
+    box-shadow: 3px 5px 10px rgba(0, 128, 0, 0.3);
+}
+
+.donner-maintenant {
+      display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: rgb(242, 9, 9);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s ease;
+}
+
+.donner-maintenant:hover {
+    box-shadow: 4px 6px 15px rgba(255, 0, 0, 0.4);
+}
+
+/* Notre Mission */
+
+.mission {
+    background-color: #e6f7e6;
+    padding: 50px 30px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.conteneur-mission {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.1);
+
+    
+}
+
+.conteneur-mission img {
+    width: 45%;
+    border-radius: 15px;
+    margin-right: 20px;
+    padding: 0;
+}
+
+.texte-mission {
+    flex: 1;
+}
+
+.texte-mission h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+ 
+}
+
+/* Histoires de Réussite */
+
+.histoires-reussite {
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 100px;
+}
+
+.conteneur-histoire {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.histoire-principale {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+}
+
+.histoire-principale::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+.histoire-principale img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+}
+
+.texte-histoire {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    border-radius: 0 0 15px 15px;
+    z-index: 1;
+}
+
+.texte-histoire h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.texte-histoire p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.texte-histoire span {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.vignettes-histoire {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.bouton-histoire {
+    background: transparent;
+    border: 2px solid transparent;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    flex: 1;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bouton-histoire img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.bouton-histoire span {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+.bouton-histoire.actif {
+    border-color: green;
+    box-shadow: 0px 0px 8px rgba(0, 128, 0, 0.5);
+}
+
+.conteneur-image {
+    position: relative;
+}
+
+.conteneur-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.conteneur-image .nom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+
+.bouton-histoire {
+    position: relative;
+    background: transparent;
+    border: 2px solid transparent;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    flex: 1;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bouton-histoire img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.bouton-histoire span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+ /* Testez vos connaissances */
+ 
+ .quiz {
+    background-color: #e6f7e6;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.conteneur-quiz {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.element-quiz {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.question-quiz {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.options-quiz {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.bouton-quiz {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin: 5px;
+    text-align: center;
+}
+
+.bouton-quiz:hover {
+    background: #b5e7b5;
+}
+
+.reponse-quiz {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none;
+}
+
+
+.reponse-quiz.correct {
+    background-color: #e6ffe6;
+    border: 2px solid #4CAF50;
+    color: #2e7d32;
+}
+
+
+.reponse-quiz.wrong {
+    background-color: #ffe6e6;
+    border: 2px solid #f44336;
+    color: #b71c1c;
+}
+
+
+.bouton-quiz:disabled {
+    display: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+ /* Notre Impact */
+
+ .impact {
+    background-color: #e6f7e6;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.conteneur-impact {
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+    align-items: center;
+}
+
+.element-impact {
+    text-align: center;
+}
+
+.element-impact svg {
+    width: 50px;
+    height: 50px;
+    color: #007a3d;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+/* Témoignages */
+
+.temoignages {
+background-color: #f7fcf7;
+padding: 50px 20px;
+text-align: center;
+}
+
+.temoignages h2 {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 30px;
+}
+
+.conteneur-temoignages {
+width: 100%;
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.carte-temoignage {
+background: white;
+border-radius: 10px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+max-width: 380px;
+text-align: left;
+}
+
+
+.conteneur-image img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+}
+
+
+.carte-temoignage p {
+padding: 15px;
+font-size: 14px;
+color: #333;
+}
+
+.carte-temoignage strong {
+display: block;
+padding: 10px 15px;
+font-size: 14px;
+color: #000;
+} 
+   
+/* footer */
+
+.section-pied-de-page {
+    background: #0c0c0c;
+    color: white;
+    padding: 40px 20px;
+    
+    }
+    
+    .contenu-pied-de-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 5px;
+    flex-wrap: wrap;
+    }
+    
+    .bloc-pied-de-page{
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    }
+    
+    .bloc-pied-de-page h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+    
+    .bloc-pied-de-page p {
+    font-size: 14px;
+    color: #ccc;
+    }
+    
+  
+    
+  /* Partie Responsive */
+
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+        }
+        .btn-don {
+            width: 100%;
+
+            
+        }
+        
+        nav ul {
+            flex-direction: column;
+            gap: 20px;
+        }
+       
+        .menu-burger .barre {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            transition: 0.3s;
+        }
+      
+        .menu-burger.active .barre:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+        .menu-burger.active .barre:nth-child(2) {
+            opacity: 0; 
+        }
+        .menu-burger.active .barre:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+        .menu-burger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            transition: 0.3s;
+        }
+        nav {
+            display: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: start;
+            margin-left: 10px;
+        }
+
+        .don-btn {
+            width: 90%;
+            max-width: none; 
+        }
+
+        .close-menu {
+            display: block;
+        }
+       
+        .burger-navigation {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #184b31;
+            text-align: left;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+        .menu-burger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 24px;
+            transition: 0.3s;
+        }
+        
+        .burger-navigation.active {
+            display: block;
+            width: 100%;
+            
+        }
+        .burger-navigation {
+            display: none;
+        }
+        .conteneur-donation {
+            flex-direction: column;
+        }
+
+        .conteneur-mission {
+        flex-direction: column;
+        
+            
+        }
+        .conteneur-mission img {
+            width: 100%;
+            border-radius: 15px;
+            margin-right: 0px;
+        }
+        .conteneur-impact {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+            .histoires-reussite {
+                margin: 0 15px;
+                padding: 30px 15px;
+            }
+
+            
+            .conteneur-don {
+                flex-direction: column;
+                
+            }
+
+            .carte-temoignage {
+                max-width: 100%;
+            }
+
+            .texte-mission {
+                flex: 1;
+                padding: 20px;
+            }
+        
+        .contact {
+            width: 90%;
+            padding: 20px;
+        }
+        .btn-soumettre {
+            font-size: 16px;
+            padding: 10px;
+        }
+    }
+    
+
+     

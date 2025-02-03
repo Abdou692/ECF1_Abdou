@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quatre Pattes - Faites un don</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="images/Icone_quatrePattes.png" alt="Logo de Quatre Pattes">
+        <div>Quatre Pattes</div>
+    </div>
+    
+    <!-- Bouton Burger -->
+
+    <div class="menu-burger">
+        <div class="barre"></div>
+        <div class="barre"></div>
+        <div class="barre"></div>
+    </div>
+
+    <nav class="burger-navigation">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="indexcontact.html">Contact</a></li>
+            <li class="don-btn"><img src="images/Icone2.png"> Faire un don</li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+    <!-- Image Grande Photo-->
+
+    <section class="Grande-photo">
+        <img src="images/Image_haut_de_page.png">
+        <div class="superposition">
+            <h1>Protégeons-les Ensemble</h1>
+            <p>Chaque don compte pour leur offrir une vie meilleure</p>
+        </div>
+    </section>
+
+    <!-- Faites un don -->
+    <section class="donation">
+        <h2>Faites un don</h2>
+        <div class="conteneur-don">
+            <button class="option-don" data-montant="10">
+                <span>10€</span>
+                <p>permet de nourrir 5 animaux pendant une semaine</p>
+            </button>
+            <button class="option-don" data-montant="20">
+                <span>20€</span>
+                <p>permet d’héberger un animal sauvage pendant une nuit</p>
+            </button>
+            <button class="option-don actif" data-montant="50">
+                <span>50€</span>
+                <p>permet de financer les soins vétérinaires complets pour un animal</p>
+            </button>
+        </div>
+        <div class="frequence-don">
+            <button class="bouton-freq-don" data-type="once">Une fois</button>
+            <button class="bouton-freq-don actif" data-type="monthly">Mensuel</button>
+            <button class="bouton-freq-don" data-type="yearly">Annuel</button>
+        </div>
+        <button class="donner-maintenant"> <img src="images/Icone2.png"> 
+              Faire un don de <span id="montant-don">50</span>€/mois</button>
+    </section>
+
+    <!-- Notre mission -->
+    <section class="mission">
+        <div class="conteneur-mission">
+            <img src="images/Notre_Mission.png">
+         <div>
+         
+         <div class="texte-mission">
+            <h2>Notre Mission</h2>
+            <p>Depuis 2010, Quatre Pattes œuvre sans relâche pour la protection et le bien-être des animaux en France. Notre mission est double : secourir les animaux en détresse et sensibiliser le public à la cause animale.</p><br>
+            <p>Chaque année, nous prenons en charge plus de 1000 animaux abandonnés, maltraités ou blessés. Grâce à notre réseau de familles d’accueil et nos partenariats avec des refuges, nous leur offrons une seconde chance.</p><br>
+            <p>Votre soutien est essentiel pour continuer notre mission. Ensemble, nous pouvons faire la différence pour ces êtres qui comptent sur nous.</p><br>
+        </div>
+        
+    </section>
+    
+    <!-- Histoire de réussite -->
+
+    <section class="histoires-reussite">
+        <h2>Histoires de Réussite</h2>
+        <div class="histoire-principale">
+            <img src="images/Luna.png" alt="Luna">
+            <div class="texte-histoire">
+                <h3 id="titre-histoire">Luna</h3>
+                <p id="texte-histoire">Trouvée dans la rue avec une patte cassée, Luna a été soignée et a retrouvé sa joie de vivre. Elle coule maintenant des jours heureux dans sa nouvelle famille.</p>
+                <span id="date-histoire">Janvier 2024</span>
+            </div>
+        </div>
+        <div class="vignettes-histoire">
+            <button class="bouton-histoire actif" data-image="images/Luna.png" data-title="Luna" data-text="Trouvée dans la rue avec une patte cassée, Luna a été soignée et a retrouvé sa joie de vivre. Elle coule maintenant des jours heureux dans sa nouvelle famille." data-histoire="Janvier 2024">
+                <img src="images/Luna.png">
+                <span>Luna</span>
+            </button>
+            <button class="bouton-histoire" data-image="images/Oscar.png" data-title="Oscar" data-text="Oscar a été abandonné dans un refuge, mais grâce à notre programme d’adoption, il a trouvé un nouveau foyer aimant." data-histoire="Février 2024">
+                <img src="images/Oscar.png">
+                <span>Oscar</span>
+            </button>
+            <button class="bouton-histoire" data-image="images/Max.png" data-title="Max" data-text="Max était un chien errant avant d’être recueilli par une famille chaleureuse. Aujourd’hui, il vit une vie heureuse et active." data-histoire="Mars 2024">
+                <img src="images/Max.png">
+                <span>Max</span>
+            </button>
+        </div>
+    </section>
+    
+    
+    
+    
+
+        
+    </section>
+
+    <!-- Testez vos connaissances -->
+
+    <section class="quiz">
+        <h2>Testez Vos Connaissances</h2>
+        <div class="conteneur-quiz">
+            <div class="element-quiz">
+                <p class="question-quiz"><strong>Les associations gardent la majorité des dons pour leur fonctionnement</strong></p>
+                <div class="options-quiz">
+                    <button class="bouton-quiz" data-answer="false" data-message="❌ Faux ! Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.">
+                        Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement
+                    </button>
+                    <button class="bouton-quiz" data-answer="true" data-message="✅ Correct ! 85% des dons vont directement aux animaux.">
+                        Faux
+                    </button>
+                </div>
+                <div class="reponse-quiz"></div>
+            </div>
+            <div class="element-quiz">
+                <p class="question-quiz"><strong>Les refuges ne prennent que les animaux en bonne santé</strong></p>
+                <div class="options-quiz">
+                    <button class="bouton-quiz" data-answer="false" data-message="❌ Faux ! Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !">
+                        Vrai, ils refusent les animaux malades car c'est trop coûteux
+                    </button>
+                    <button class="bouton-quiz" data-answer="true" data-message="✅ Correct ! Nos refuges prennent soin de tous les animaux, même les plus fragiles.">
+                        Faux
+                    </button>
+                </div>
+                <div class="reponse-quiz"></div>
+            </div>
+            <div class="element-quiz">
+                <p class="question-quiz"><strong>Les associations ont trop de moyens grâce aux dons</strong></p>
+                <div class="options-quiz">
+                    <button class="bouton-quiz" data-answer="false" data-message="❌ Faux ! Chaque don est crucial pour la survie des animaux et des refuges.">
+                        Vrai, elles reçoivent beaucoup d'argent des donateurs
+                    </button>
+                    <button class="bouton-quiz" data-answer="true" data-message="✅ Correct ! Les associations ont besoin de dons constants pour fonctionner.">
+                        Faux
+                    </button>
+                </div>
+                <div class="reponse-quiz"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Impact -->
+    
+<section class="impact">
+    <h2>Notre Impact</h2>
+    <div class="conteneur-impact">
+        <div class="element-impact">
+            <p><img src="images/Icone3.png"></p>
+            <p><strong>50+ Refuges</strong></p>
+            <p>Partenaires à travers la France</p>
+    
+        </div>
+        <div class="element-impact">
+            <p><img src="images/Icone4.png"></p>
+            <p><strong>1000+ Animaux</strong></p>
+            <p>Sauvés chaque année</p>
+        </div>
+        <div class="element-impact">
+            <p><img src="images/Icone5.png"></p>
+            <p><strong>10 000+ Repas</strong></p>
+            <p>Distribués par mois</p>
+        </div>
+
+    </div>
+</section>
+
+   <!-- Témoignages-->
+    
+ <section class="temoignages">
+    <h2>Témoignages</h2>
+    <div class="conteneur-temoignages">
+        <div class="carte-temoignage">
+            <div class="conteneur-image">
+                <img src="images/Temoignage_Refuge_Lyon.png" alt="Refuge des Quatre Pattes-Lyon">
+            </div>
+            <p>“Grâce à vos dons, nous avons pu accueillir plus de 200 animaux cette année et leur offrir une seconde chance.”</p>
+            <strong>Refuge des Quatre Pattes-Lyon</strong>
+        </div>
+        <div class="carte-temoignage">
+            <div class="conteneur-image">
+                <img src="images/Temoignage_Refuge_Marseille.png" alt="Sanctuaire Animal-Marseille">
+            </div>
+            <p>“Le soutien de Quatre Pattes nous permet de maintenir notre mission de protection des animaux sauvages.”</p>
+            <strong>Sanctuaire Animal-Marseille</strong>
+        </div>
+        <div class="carte-temoignage">
+            <div class="conteneur-image">
+                <img src="images/Temoignage_Refuge_Paris.png" alt="Refuge du Soleil-Paris">
+
+            </div>
+            <p>“Chaque don compte et nous aide à offrir un avenir meilleur aux animaux abandonnés.”</p>
+            <strong>Refuge du Soleil-Paris</strong>
+        </div>
+    </div>
+</section>
+
+
+<footer class="section-pied-de-page">
+    <div class="contenu-pied-de-page">
+        <div class="bloc-pied-de-page">
+            <h3>Quatre Pattes</h3>
+            <p>Ensemble, protégeons les animaux et donnons-leur une vie meilleure.</p>
+        </div>
+        <div class="bloc-pied-de-page">
+            <h3>Contact</h3>
+            <p><img src="images/Icone6.png" style="margin-right: 7px;">contact@quatrepattes.org</p>
+
+        </div>
+        <div class="bloc-pied-de-page">
+            <h3>Suivez-nous</h3>
+        </div>
+    </div>
+</footer>
+
+</main>
+</body>
+</html>
